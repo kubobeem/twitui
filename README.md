@@ -4,9 +4,35 @@
 
 **X (Twitter) client in your terminal — an x.com-like TUI powered by [twifork](https://github.com/PawiX25/twifork)**
 
-`npm install -g twitui` → `twitui`
+`npm i -g https://github.com/kubobeem/twitui/archive/refs/heads/main.tar.gz` → `twitui`
 
 </div>
+
+## Install
+
+**From GitHub (works today, no npm registry account needed):**
+
+```bash
+# tarball URL (recommended — prebuilt, fast)
+npm i -g https://github.com/kubobeem/twitui/archive/refs/heads/main.tar.gz
+
+# or the git shorthand
+npm i -g github:kubobeem/twitui
+```
+
+> npm 11.x has a bug where the `github:` shorthand can leave a broken
+> symlink on global installs. If `twitui` is not found afterwards, remove
+> the leftovers (`npm rm -g twitui` or delete
+> `%APPDATA%\npm\node_modules\twitui`) and use the tarball URL above.
+
+**From a local clone:**
+
+```bash
+git clone https://github.com/kubobeem/twitui && cd twitui
+npm i -g .
+```
+
+*npm registry publishing (`npm i -g twitui`) is planned once the package is published.*
 
 ## Features
 
