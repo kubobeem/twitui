@@ -1,6 +1,6 @@
 {
   "name": "twitui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "X (Twitter) TUI client powered by twifork — an x.com-like UI in your terminal",
   "license": "MIT",
   "type": "module",
