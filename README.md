@@ -13,17 +13,20 @@
 **From GitHub (works today, no npm registry account needed):**
 
 ```bash
-# tarball URL (recommended — prebuilt, fast)
 npm i -g https://github.com/kubobeem/twitui/archive/refs/heads/main.tar.gz
-
-# or the git shorthand
-npm i -g github:kubobeem/twitui
 ```
 
-> npm 11.x has a bug where the `github:` shorthand can leave a broken
-> symlink on global installs. If `twitui` is not found afterwards, remove
-> the leftovers (`npm rm -g twitui` or delete
-> `%APPDATA%\npm\node_modules\twitui`) and use the tarball URL above.
+> ⚠️ **Do NOT use `npm i -g kubobeem/twitui` (the git shorthand) on npm 11.x** —
+> a known npm bug installs a symlink to a temp git clone that is deleted
+> right after, so `twitui` fails with `Cannot find module ... dist/cli.js`.
+> Use the tarball URL above. If you already hit the bug:
+>
+> ```powershell
+> npm rm -g twitui
+> # or manually:
+> Remove-Item -Recurse -Force $env:APPDATA\npm\node_modules\twitui
+> Remove-Item $env:APPDATA\npm\twitui*
+> ```
 
 **From a local clone:**
 
