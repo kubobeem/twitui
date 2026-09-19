@@ -18,7 +18,6 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "prepare": "node -e \"require('fs').existsSync('dist/cli.js')||process.exit(0)\" || npm run build",
     "prepack": "npm run build",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
