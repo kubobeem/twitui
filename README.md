@@ -13,11 +13,11 @@
 **From GitHub (works today, no npm registry account needed):**
 
 ```bash
-# latest main branch
-npm i -g https://github.com/kubobeem/twitui/archive/refs/heads/main.tar.gz
+# from a release (recommended — tested tarball attached to each release)
+npm i -g https://github.com/kubobeem/twitui/releases/latest/download/twitui-0.1.2.tgz
 
-# or pinned to a release tag
-npm i -g https://github.com/kubobeem/twitui/archive/refs/tags/v0.1.0.tar.gz
+# or latest main branch
+npm i -g https://github.com/kubobeem/twitui/archive/refs/heads/main.tar.gz
 ```
 
 > ⚠️ **Do NOT use `npm i -g kubobeem/twitui` (git shorthand / git URL)** —
