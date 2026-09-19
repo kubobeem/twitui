@@ -20,6 +20,11 @@ npm i -g https://github.com/kubobeem/twitui/releases/latest/download/twitui-0.1.
 npm i -g https://github.com/kubobeem/twitui/archive/refs/heads/main.tar.gz
 ```
 
+> **Note on versions:** the `latest/download` URL above pins an explicit
+> version in its filename. Check the
+> [Releases page](https://github.com/kubobeem/twitui/releases) for the
+> newest one — every release is built by CI after tests pass.
+
 > ⚠️ **Do NOT use `npm i -g kubobeem/twitui` (git shorthand / git URL)** —
 > npm has a bug (npm 10 & 11, Windows) where a git-hosted dependency is
 > installed as a symlink to a temp git clone that npm deletes right
@@ -40,7 +45,9 @@ git clone https://github.com/kubobeem/twitui && cd twitui
 npm i -g .
 ```
 
-*npm registry publishing (`npm i -g twitui`) is planned once the package is published.*
+This package is distributed via GitHub Releases (not the npm registry —
+npm now requires 2FA for new-package publishes, and registry publishing
+is intentionally skipped here).
 
 ## Features
 
