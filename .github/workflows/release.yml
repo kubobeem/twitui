@@ -54,7 +54,9 @@ jobs:
         run: npm run build
 
       - name: Pack tarball
-        run: npm pack --pack-destination release/
+        run: |
+          mkdir -p release
+          npm pack --pack-destination release
 
       - name: Create GitHub Release with tarball
         uses: softprops/action-gh-release@v2
