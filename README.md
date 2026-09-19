@@ -13,12 +13,17 @@
 **From GitHub (works today, no npm registry account needed):**
 
 ```bash
+# latest main branch
 npm i -g https://github.com/kubobeem/twitui/archive/refs/heads/main.tar.gz
+
+# or pinned to a release tag
+npm i -g https://github.com/kubobeem/twitui/archive/refs/tags/v0.1.0.tar.gz
 ```
 
-> ⚠️ **Do NOT use `npm i -g kubobeem/twitui` (the git shorthand) on npm 11.x** —
-> a known npm bug installs a symlink to a temp git clone that is deleted
-> right after, so `twitui` fails with `Cannot find module ... dist/cli.js`.
+> ⚠️ **Do NOT use `npm i -g kubobeem/twitui` (git shorthand / git URL)** —
+> npm has a bug (npm 10 & 11, Windows) where a git-hosted dependency is
+> installed as a symlink to a temp git clone that npm deletes right
+> after, so `twitui` fails with `Cannot find module ... dist/cli.js`.
 > Use the tarball URL above. If you already hit the bug:
 >
 > ```powershell
